@@ -9,14 +9,13 @@ parallel-jobs = 1
 [YouTube]
 build-mode = "both"
 enabled = true
-included-patches = "'Custom branding icon for YouTube'"
-patcher-args = """\
-  -OappIcon=xisr_yellow \
-  """
+included-patches = "'Visual preferences icons'"
+patcher-args = "-e 'Custom branding icon for YouTube' -OappIcon=afn_red"
 version = "19.44.39"
-patches-source = "anddea/revanced-patches"
-patches-version = "v3.4.0"
-rv-brand = "anddea ReVanced"
+patches-source = "inotia00/revanced-patches"
+cli-source = "inotia00/revanced-cli"
+patches-version = "v5.4.1"
+rv-brand = "inotia00 ReVanced"
 riplib = true
 arch = "arm64-v8a"    
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
@@ -26,14 +25,13 @@ uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 [Music]
 build-mode = "both"
 enabled = true
-included-patches = "'Custom branding icon for YouTube Music'"
-patcher-args = """\
-  -OappIcon=xisr_yellow \
-  """
-version = "8.02.53"
-patches-source = "anddea/revanced-patches"
-patches-version = "v3.4.0"
-rv-brand = "anddea ReVanced"
+included-patches = "'Visual preferences icons'"
+patcher-args = "-e 'Custom branding icon for YouTube Music' -OappIcon=afn_red"
+version = "8.05.51"
+patches-source = "inotia00/revanced-patches"
+cli-source = "inotia00/revanced-cli"
+patches-version = "v5.4.1"
+rv-brand = "inotia00 ReVanced"
 riplib = true
 arch = "arm64-v8a"    
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
