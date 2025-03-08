@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'config.toml'
+      - "config.toml"
 
 jobs:
   run:
@@ -130,6 +130,8 @@ jobs:
 
           BODY="$(sed 's/^\* \*\*/↪ \*\*/g; s/^\* `/↪ \*\*/g; s/`/\*/g; s/^\* /\↪/g; s/\*\*/\*/g; s/###//g; s/^- /↪ /g; /^==/d;' ../build.md)"
           MSG="*New Revanced build! 🎉*
+
+          *🔔 inotia00 patches*
 
           ${BODY}
 
