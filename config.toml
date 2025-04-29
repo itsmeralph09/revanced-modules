@@ -13,9 +13,9 @@ included-patches = "'Custom branding icon for YouTube'"
 patcher-args = """\
   -OappIcon=xisr_yellow \
   """
-version = "19.44.39"
+version = "19.47.53"
 patches-source = "anddea/revanced-patches"
-patches-version = "v3.5.0"
+patches-version = "v3.7.0"
 rv-brand = "anddea ReVanced"
 riplib = true
 arch = "arm64-v8a"    
@@ -30,12 +30,17 @@ included-patches = "'Custom branding icon for YouTube Music'"
 patcher-args = """\
   -OappIcon=xisr_yellow \
   """
-version = "8.02.53"
+version = "8.12.53"
 patches-source = "anddea/revanced-patches"
-patches-version = "v3.5.0"
+patches-version = "v3.7.0"
 rv-brand = "anddea ReVanced"
 riplib = true
 arch = "arm64-v8a"    
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
+
+[Spotify]
+uptodown-dlurl = "https://spotify.en.uptodown.com/android"
+version = "9.0.36.683"
+arch = "arm64-v8a"
