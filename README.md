@@ -1,7 +1,7 @@
 # ReVanced Modules
 
 [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/elohim_etz)
-[![CI](https://github.com/j-hc/revanced-magisk-module/actions/workflows/ci.yml/badge.svg?event=schedule)](https://github.com/elohim-etz/revanced-modules/actions/workflows/ci.yml)
+[![Total Downloads](https://img.shields.io/github/downloads/elohim-etz/revanced-modules/total.svg?style=for-the-badge)](https://github.com/elohim-etz/revanced-modules/releases)
 
 Extensive ReVanced builder
 
