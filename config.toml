@@ -1,5 +1,9 @@
 enable-module-update = true # set this to false if you do not want to receive updates for the module in magisk app
 parallel-jobs = 1
+patches-source = "anddea/revanced-patches"
+patches-version = "dev"
+rv-brand = "anddea ReVanced"
+remove-rv-integrations-checks = true
 
 # add 'enabled = false' for not patching a specific app or remove it from the config
 # see https://github.com/j-hc/revanced-magisk-module/blob/main/CONFIG.md for more detailed explanations
@@ -14,9 +18,6 @@ patcher-args = """\
   -OappIcon=xisr_yellow \
   """
 version = "20.21.37"
-patches-source = "anddea/revanced-patches"
-patches-version = "dev"
-rv-brand = "anddea ReVanced"
 riplib = true
 arch = "arm64-v8a"    
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
@@ -30,10 +31,7 @@ included-patches = "'Custom branding icon for YouTube Music'"
 patcher-args = """\
   -OappIcon=xisr_yellow \
   """
-version = "8.18.52"
-patches-source = "anddea/revanced-patches"
-patches-version = "dev"
-rv-brand = "anddea ReVanced"
+version = "8.24.52"
 riplib = true
 arch = "arm64-v8a"    
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
