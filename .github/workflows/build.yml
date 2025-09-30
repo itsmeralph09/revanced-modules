@@ -1,11 +1,22 @@
 name: Build Modules
 on:
   workflow_dispatch:
+    inputs:
+      from_ci:
+        description: "Triggered from CI"
+        required: false
+        default: "false"
   push:
     branches:
       - main
     paths:
       - "config.toml"
+  workflow_call:
+    inputs:
+      from_ci:
+        required: false
+        type: boolean
+        default: false
 
 jobs:
   run:
