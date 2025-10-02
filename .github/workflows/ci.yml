@@ -2,7 +2,7 @@ name: CI
 
 on:
   schedule:
-    - cron: "0 */6 * * *"   # every 6 hours
+    - cron: "0 */6 * * *" # every 6 hours
   workflow_dispatch:
 
 jobs:
@@ -33,15 +33,20 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          BODY=$(gh api repos/${{ github.repository }}/releases/latest --jq '.body' || true)
+          BODY=$(gh api repos/${{ github.repository }}/releases --jq '.[0].body' || true)
+
           if [[ -z "$BODY" ]]; then
             echo "No previous release found. First build."
             echo "CURRENT_PATCH=none" >> $GITHUB_ENV
           else
-            CUR=$(echo "$BODY" | grep -Po 'anddea/patches-\K[^ ]+(?=\.rvp)' || true)
+            LINE=$(echo "$BODY" | grep '^Patches:' || true)
+            CUR=$(echo "$BODY" | grep -Po 'anddea/patches-\K[^ ]+(?=\.rvp)' | head -n1 || true)
+
             if [[ -z "$CUR" ]]; then
               CUR=none
             fi
+
+            CUR=$(echo "$CUR" | tr -d '\r\n')
             echo "CURRENT_PATCH=$CUR" >> $GITHUB_ENV
             echo "Current patch in last release: $CUR"
           fi
