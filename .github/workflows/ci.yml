@@ -23,7 +23,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           LATEST_TAG=$(gh api repos/anddea/revanced-patches/releases \
-            --jq '[.[] | select(.prerelease==true)][0].tag_name')
+            --jq '.[0].tag_name')
           LATEST_TAG=${LATEST_TAG#v}
           echo "LATEST_PATCH=$LATEST_TAG" >> $GITHUB_ENV
           echo "Latest upstream patch: $LATEST_TAG"
