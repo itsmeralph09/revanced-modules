@@ -70,8 +70,11 @@ get_rv_prebuilts() {
 			ver=$(jq -e -r '.[] | .tag_name' <<<"$resp" | get_highest_ver) || return 1;
 		fi
 		if [ "$ver" = "latest" ]; then
-			rv_rel+="/latest"
-			name_ver="*"
+			local resp
+			resp=$(gh_req "$rv_rel" -) || return 1
+			ver=$(jq -e -r '.[0].tag_name' <<<"$resp") || return 1
+			rv_rel+="/tags/${ver}"
+			name_ver="${ver}"
 		else
 			rv_rel+="/tags/${ver}"
 			name_ver="$ver"
