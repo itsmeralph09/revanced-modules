@@ -1,9 +1,6 @@
 enable-module-update = true # set this to false if you do not want to receive updates for the module in magisk app
 parallel-jobs = 1
-patches-source = "anddea/revanced-patches"
 patches-version = "latest"
-rv-brand = "anddea ReVanced"
-remove-rv-integrations-checks = true
 
 # add 'enabled = false' for not patching a specific app or remove it from the config
 # see https://github.com/j-hc/revanced-magisk-module/blob/main/CONFIG.md for more detailed explanations
@@ -13,6 +10,8 @@ remove-rv-integrations-checks = true
 [YouTube]
 build-mode = "both"
 enabled = true
+patches-source = "anddea/revanced-patches"
+rv-brand = "anddea ReVanced"
 included-patches = "'Custom branding icon for YouTube'"
 patcher-args = """\
   -OappIcon=xisr_yellow \
@@ -27,6 +26,8 @@ uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 [Music]
 build-mode = "both"
 enabled = true
+patches-source = "anddea/revanced-patches"
+rv-brand = "anddea ReVanced"
 included-patches = "'Custom branding icon for YouTube Music'"
 patcher-args = """\
   -OappIcon=xisr_yellow \
@@ -40,6 +41,17 @@ uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 
 [Spotify]
 uptodown-dlurl = "https://spotify.en.uptodown.com/android"
+patches-source = "anddea/revanced-patches"
+rv-brand = "anddea ReVanced"
 included-patches = "'Custom theme'"
 riplib = true
 arch = "arm64-v8a"
+
+[X]
+uptodown-dlurl = "https://twitter.en.uptodown.com/android"
+apkmirror-dlurl = "https://apkmirror.com/apk/x-corp/twitter"
+patches-source = "crimera/piko"
+rv-brand = "Piko"
+riplib = true
+included-patches = "'Dynamic color'"
+dpi = "120-640dpi"
